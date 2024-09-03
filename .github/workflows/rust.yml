@@ -95,7 +95,7 @@ jobs:
       - name: install necessary shells
         run: brew install fish zsh bash
       - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: fnm-macos
           path: target/release
@@ -131,7 +131,7 @@ jobs:
     name: "e2e/windows"
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: fnm-windows
           path: target/release
@@ -167,7 +167,7 @@ jobs:
   #   if: contains(join(needs.*.result, ','), 'failure')
   #   steps:
   #   - uses: actions/checkout@v3
-  #   - uses: actions/download-artifact@v3
+  #   - uses: actions/download-artifact@v4.1.7
   #     with:
   #       name: fnm-windows
   #       path: target/release
@@ -201,7 +201,7 @@ jobs:
       - name: install necessary shells
         run: sudo apt-get update && sudo apt-get install -y fish zsh bash
       - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: fnm-linux
           path: target/release
@@ -325,7 +325,7 @@ jobs:
       - name: install necessary shells
         run: sudo apt-get update && sudo apt-get install -y fish zsh bash
       - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: fnm-linux
           path: target/release
@@ -369,7 +369,7 @@ jobs:
       - name: install necessary shells
         run: sudo apt-get update && sudo apt-get install -y fish zsh bash hyperfine
       - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: fnm-linux
           path: target/release
